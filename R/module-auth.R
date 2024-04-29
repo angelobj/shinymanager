@@ -52,7 +52,7 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
     )),
     tags$div(
       id = ns("auth-mod"), class = "panel-auth",
-      tags$br(), tags$div(style = "height: 70px;"), tags$br(),
+      tags$br(), tags$div(id="top-auth-space",style = "height: 70px;"), tags$br(),
       fluidRow(
         column(
           width = 4, offset = 4,

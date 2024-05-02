@@ -103,7 +103,7 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
                          )
                 )
               },
-              tags$div(id="auth-form",
+              tags$div(id="auth-form",class="auth-form",
                 tags$div(
                   style = "text-align: center;",
                   if (!is.null(tags_top)) tags_top,

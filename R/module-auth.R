@@ -108,25 +108,37 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
                 if (!is.null(tags_top)) tags_top,
                 tags$h3(lan$get("Please authenticate"), id = ns("shinymanager-auth-head"))
               ),
-              tags$br(),
-              tags$div(id="auth-form",class="auth-form",
-                textInput(
-                  inputId = ns("user_id"),
-                  label = lan$get("Username:"),
-                  width = "100%"
+              fluidRow(style="display:flex;",
+                 column(7,h4("Credenciales")),
+                 column(5,h4("Cuenta Google"))
+              ),
+              fluidRow(style="display:flex;margin-top:-25px;",
+                column(7,
+                       tags$div(
+                         class = "gray-box",
+                            textInput(
+                              inputId = ns("user_id"),
+                              label = lan$get("Username:"),
+                              width = "100%"
+                            ),
+                            passwordInput(
+                              inputId = ns("user_pwd"),
+                              label = lan$get("Password:"),
+                              width = "100%"
+                            ),
+                            actionButton(
+                              inputId = ns("go_auth"),
+                              label = lan$get("Login"),
+                              width = "100%",
+                              class = paste0("btn-", status)
+                            )
+                      )
                 ),
-                passwordInput(
-                  inputId = ns("user_pwd"),
-                  label = lan$get("Password:"),
-                  width = "100%"
-                ),
-                tags$br(),
-                actionButton(
-                  inputId = ns("go_auth"),
-                  label = lan$get("Login"),
-                  width = "100%",
-                  class = paste0("btn-", status)
-                )
+                column(5,
+                       tags$div(
+                          class = "gray-box",
+                              googleSignInUI(id = "demo", logout_name = "Sign Out", logout_class = "btn-danger"))
+                      )
               ),
               tags$br(), tags$br(),
                 tags$script(

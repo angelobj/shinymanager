@@ -137,7 +137,7 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
                 column(5,
                        tags$div(
                           class = "gray-box",
-                              googleSignInUI(id = "demo", logout_name = "Sign Out", logout_class = "btn-danger"))
+                              googleSignInUI(id = ns("demo"), logout_name = "Sign Out", logout_class = "btn-danger"))
                       )
               ),
               tags$br(), tags$br(),

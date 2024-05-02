@@ -345,7 +345,7 @@ pkgEnv$label_ptbr = list(
 )
 
 pkgEnv$label_es = list(
-  "Please authenticate" = "Iniciar sesi\u00f3n usando Credenciales",
+  "Please authenticate" = "Iniciar sesi\u00f3n",
   "Username:" = "Usuario:",
   "Password:" = "Contrase\u00f1a:",
   "Login" = "Iniciar sesi\u00f3n",

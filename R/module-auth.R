@@ -103,13 +103,13 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
                          )
                 )
               },
+              tags$div(
+                style = "text-align: center;",
+                if (!is.null(tags_top)) tags_top,
+                tags$h3(lan$get("Please authenticate"), id = ns("shinymanager-auth-head"))
+              ),
+              tags$br(),
               tags$div(id="auth-form",class="auth-form",
-                tags$div(
-                  style = "text-align: center;",
-                  if (!is.null(tags_top)) tags_top,
-                  tags$h3(lan$get("Please authenticate"), id = ns("shinymanager-auth-head"))
-                ),
-                tags$br(),
                 textInput(
                   inputId = ns("user_id"),
                   label = lan$get("Username:"),
@@ -126,11 +126,11 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
                   label = lan$get("Login"),
                   width = "100%",
                   class = paste0("btn-", status)
-                ),
-                tags$br(), tags$br(),
+                )
+              ),
+              tags$br(), tags$br(),
                 tags$script(
                   sprintf("bindEnter('%s');", ns(""))
-                )
               ),
               tags$div(id = ns("result_auth")),
               if (!is.null(tags_bottom)) tags$div(style = "margin-top:-10px;", tags$hr()), tags_bottom,

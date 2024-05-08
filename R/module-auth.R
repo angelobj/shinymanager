@@ -241,7 +241,7 @@ auth_server <- function(input, output, session,
   sign_ins <- shiny::callModule(googleSignIn, ns("demo"))
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 
-  observeEvent(input$go_auth, {
+  observeEvent(c(input$go_auth,sign_ins()), {
     removeUI(selector = jns("msg_auth"))
     res_auth <- check_credentials(input$user_id, input$user_pwd)
 
@@ -254,6 +254,9 @@ auth_server <- function(input, output, session,
 
     if (isTRUE(res_auth$result) & !locked) {
       removeUI(selector = jns("auth-mod"))
+
+      shinyalert("Logueado con Google")
+      
       authentication$result <- TRUE
       authentication$user <- input$user_id
       authentication$user_info <- res_auth$user_info

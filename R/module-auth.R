@@ -244,7 +244,10 @@ auth_server <- function(input, output, session,
   observeEvent(c(input$go_auth,sign_ins()), {
     removeUI(selector = jns("msg_auth"))
     res_auth <- check_credentials(input$user_id, input$user_pwd)
-
+    
+    if(!is.null(sign_ins()$email)&&sign_ins()$email!='')
+    shinyalert(paste0("Logued with:",sign_ins()$email))
+  
     # locked account ?
     locked <- FALSE
     pwd_failure_limit <- as.numeric(get_pwd_failure_limit())
@@ -255,8 +258,6 @@ auth_server <- function(input, output, session,
     if (isTRUE(res_auth$result) & !locked) {
       removeUI(selector = jns("auth-mod"))
 
-      shinyalert("Logueado con Google")
-      
       authentication$result <- TRUE
       authentication$user <- input$user_id
       authentication$user_info <- res_auth$user_info

@@ -241,12 +241,9 @@ auth_server <- function(input, output, session,
   sign_ins <- shiny::callModule(googleSignIn, ns("demo"))
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 
-  observeEvent(c(input$go_auth,sign_ins()), {
+  observeEvent(input$go_auth, {
     removeUI(selector = jns("msg_auth"))
     res_auth <- check_credentials(input$user_id, input$user_pwd)
-    
-    if(!is.null(sign_ins()$email)&&sign_ins()$email!='')
-    shinyalert(paste0("Logued with:",sign_ins()$email))
   
     # locked account ?
     locked <- FALSE

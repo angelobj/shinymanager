@@ -193,7 +193,6 @@ auth_server <- function(input, output, session,
   jns <- function(x) {
     paste0("#", ns(x))
   }
-  sign_ins <- shiny::callModule(googleSignIn, ns("demo"))
 
   if(!is.reactive(lan)){
     if(is.null(lan)){
@@ -239,6 +238,11 @@ auth_server <- function(input, output, session,
   })
 
   sign_ins <- shiny::callModule(googleSignIn, ns("demo"))
+
+  observeEvent(sign_ins(),{
+    showNotification(paste(names(sign_ins()),collapse=" - "))
+  })
+  
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 
   observeEvent(input$go_auth, {

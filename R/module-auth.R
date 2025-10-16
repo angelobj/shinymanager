@@ -134,11 +134,18 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
                             )
                       )
                 ),
-                column(5,
-                       tags$div(
-                          class = "gray-box",
-                              googleSignInUI(id = ns("demo"), logout_name = "Sign Out", logout_class = "btn-danger"))
-                      )
+column(5,
+  tags$div(
+    class = "gray-box",
+    googleSignInUI(id = ns("demo"), logout_name = "Sign Out", logout_class = "btn-danger"),
+    tags$hr(),
+    # DEBUG: a test trigger that lives under the same child id ("demo")
+    actionButton(ns("demo_debug_click"), "Debug: pretend Google login"),
+    tags$small(style="display:block;margin-top:6px;color:#666;",
+      "If this button works but Google does not, the issue is inside the googleSignIn module/JS."
+    )
+  )
+)
               ),
               tags$br(), tags$br(),
                 tags$script(
@@ -237,7 +244,59 @@ auth_server <- function(input, output, session,
     }
   })
 
-  sign_ins <- shiny::callModule(googleSignIn, "demo")
+`%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
+
+# IMPORTANT: inside a module server, DO NOT wrap with ns()
+sign_ins <- callModule(googleSignIn, "demo")
+
+# Prove this auth_server is the one running
+observe({
+  showNotification("auth_server (LOCAL) is wired", type = "message", duration = 3)
+}, once = TRUE)
+
+# Prove the child id "demo" exists and list inputs under it
+observe({
+  # All inputs visible to this module
+  ids <- names(input)
+  demo_prefix <- paste0(session$ns("demo"), "-") # parentns-demo-
+  demo_ids <- ids[startsWith(ids, demo_prefix)]
+  cat("\n[DEBUG] inputs in demo namespace:\n"); print(demo_ids)
+})
+
+# Debug: button that mimics a Google success payload
+observeEvent(input$demo_debug_click, {
+  # if your googleSignIn module returns a list(name=..., email=...), mimic that:
+  fake <- list(name = "DBG User", email = "debug@iboticario.cl", when = Sys.time())
+  showNotification(sprintf("DBG fired: %s <%s>", fake$name, fake$email), type="warning")
+  # Try to process it as if it came from sign_ins()
+  # (use the same logical path you intend to use later)
+}, ignoreInit = TRUE)
+
+# Safely inspect sign_ins() changes (login/logout)
+observeEvent(sign_ins(), {
+  info <- sign_ins()
+  if (is.null(info)) {
+    showNotification("Google: signed out (sign_ins() == NULL)", type = "message")
+    return()
+  }
+  nm <- info$name  %||% ""
+  em <- info$email %||% ""
+  showNotification(sprintf("Google: %s <%s>", nm, em), type = "message")
+  cat("\n[DEBUG] sign_ins():\n"); str(info)
+}, ignoreInit = TRUE)
+
+# If you specifically want to react only when email appears/changes:
+email <- reactiveVal(NULL)
+observeEvent(sign_ins(), {
+  info <- sign_ins()
+  email( if (!is.null(info)) (info$email %||% NULL) else NULL )
+}, ignoreInit = TRUE)
+observeEvent(email(), {
+  em <- email()
+  if (is.null(em) || !nzchar(em)) return()
+  showNotification(paste("Email:", em), type = "message")
+}, ignoreInit = TRUE)
+  
 
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 

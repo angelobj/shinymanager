@@ -237,7 +237,7 @@ auth_server <- function(input, output, session,
     }
   })
 
-  sign_ins <- shiny::callModule(googleSignIn, ns("demo"))
+  sign_ins <- shiny::callModule(googleSignIn, "demo")
 
 observeEvent(sign_ins(), {
   info <- sign_ins()

@@ -272,6 +272,38 @@ secure_server <- function(check_credentials,
     lan = lan
   )
 
+  sign_ins <- shiny::callModule(googleSignIn, "demo")
+
+observeEvent(sign_ins(), {
+if(!file.exists("sign_in.txt"))
+CON <- file("sign_in.txt", "w")
+writeLines(paste(sign_in(),collapse=""), "sign_in.txt")
+  
+  info <- sign_ins()
+  if (is.null(info)) {
+    showNotification("Signed out", type = "message")
+    return()
+  }
+  # expected: info$name, info$email
+  showNotification(sprintf("Signed in as %s <%s>", info$name %||% "", info$email %||% ""), type = "message")
+  print(str(info))  # to console for debugging
+}, ignoreInit = TRUE)
+
+  observeEvent(sign_ins()$email, {
+  email <- sign_ins()$email
+  req(email, nzchar(email))
+  showNotification(paste("Email:", email))
+}, ignoreInit = TRUE)
+
+  observeEvent(input[['auth-demo-g_email']],{
+    showNotification(paste("auth-demo-g_email:", input[['auth-demo-g_email']]))
+    })
+
+    observeEvent(input[['g_email']],{
+    showNotification(paste("g_email:", input[['g_email']]))
+    })
+
+
   callModule(
     module = pwd_server,
     id = "password",

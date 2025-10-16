@@ -258,7 +258,7 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
     if(length(mail_col)>0){
       showNotification("Checking user's email")
       user_id <- tryCatch({
-        credentials %>% dplyr::select(mail_col) %>% pull() %in% email %>% which()
+        check_credentials %>% dplyr::select(mail_col) %>% pull() %in% email %>% which()
       },error = function(e){
         showNotification("Error filtering user")
         return(NULL)

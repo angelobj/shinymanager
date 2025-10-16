@@ -263,7 +263,7 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
         showNotification("Error filtering user")
         return(NULL)
       })
-      user_found<-credentials[user_id,]
+      user_found<-check_credentials[user_id,]
       hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
       if (is.null(hit)) {
         showNotification("User not found")

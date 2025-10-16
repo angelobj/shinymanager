@@ -261,6 +261,7 @@ showNotification("Checking user's email")
 user_found<-check_credentials %>% dplyr::filter(mail_col[1]==email)
 hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
     if (is.null(hit)) {
+      showNotification("User not found")
       # Unknown google user
       save_logs_failed(email %||% gname, status = "Unknown Google user")
       insertUI(

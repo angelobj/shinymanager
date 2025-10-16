@@ -250,6 +250,7 @@ observeEvent(input[['demo-g_email']],{
 },ignoreNULL=T,ignoreInit=T)
 
 observeEvent(input[["demo-g_email"]], {   # <-- your working signal
+  tryCatch({
   email <- input[["demo-g_email"]]
   gname <- input[["demo-g_name"]] %||% sub("@.*", "", email)
   
@@ -291,7 +292,11 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
         addAuthToQuery(session, token, lan()$get_language())
         session$reload()
       }
-    }
+    }  
+  },error = function(e){
+    showNotification(sprintf("Error: %s",e$message))
+  })
+  
   }}, ignoreInit = TRUE, ignoreNULL = TRUE)
 
 

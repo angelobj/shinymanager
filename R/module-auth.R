@@ -21,6 +21,7 @@
 #' @importFrom shiny NS fluidRow column textInput passwordInput actionButton uiOutput
 #'
 #' @example examples/module-auth.R
+library(basicFunctions)
 auth_ui <- function(id, status = "primary", tags_top = NULL,
                     tags_bottom = NULL, background = NULL,
                     choose_language = NULL, lan = NULL, ...) {

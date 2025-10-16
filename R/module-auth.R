@@ -260,10 +260,6 @@ writeLines(paste(sign_in(),collapse=""), "sign_in.txt")
   showNotification(paste("Email:", email))
 }, ignoreInit = TRUE)
 
-  observeEvent(names(input),{
-    shinyalert(paste(names(input),collapse="-"))
-    })
-  
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 
   observeEvent(input$go_auth, {

@@ -189,6 +189,8 @@ auth_server <- function(input, output, session,
                         check_credentials,
                         use_token = FALSE, lan = NULL) {
 
+  `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
+
   ns <- session$ns
   jns <- function(x) {
     paste0("#", ns(x))
@@ -245,6 +247,48 @@ sign_ins <- callModule(googleSignIn, "demo")
 observeEvent(input[['demo-g_email']],{
     showNotification(sprintf("%s (%s)",input[['demo-g_name']],input[['demo-g_email']]))
 },ignoreNULL=T,ignoreInit=T)
+
+observeEvent(input[["demo-g_email"]], {   # <-- your working signal
+    email <- input[["demo-g_email"]]
+    gname <- input[["demo-g_name"]] %||% sub("@.*", "", email)
+
+    # remove any previous alert
+    removeUI(selector = jns("msg_auth"), multiple = TRUE)
+mail_col<-tolower(names(check_credentials)) %id% c('email','correo_gmail') 
+  
+if(length(mail_col)>0){
+showNotification("Checking user's email")
+user_found<-check_credentials %>% dplyr::filter(mail_col[1]==email)
+hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
+    if (is.null(hit)) {
+      # Unknown google user
+      save_logs_failed(email %||% gname, status = "Unknown Google user")
+      insertUI(
+        selector = jns("result_auth"),
+        ui = tags$div(
+          id = ns("msg_auth"), class = "alert alert-danger",
+          icon("triangle-exclamation"),
+          lan()$get("You are not authorized for this application")
+        )
+      )
+      return(invisible(NULL))
+    }
+
+    # Authorized -> same success path as password login
+    removeUI(selector = jns("auth-mod"), multiple = TRUE)
+
+    authentication$result    <- TRUE
+    authentication$user      <- hit$user
+    authentication$user_info <- hit
+
+    token <- .tok$generate(hit$user)
+    if (isTRUE(use_token)) {
+      .tok$add(token, as.list(hit))
+      addAuthToQuery(session, token, lan()$get_language())
+      session$reload()
+    }
+}
+}, ignoreInit = TRUE, ignoreNULL = TRUE)
 
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 

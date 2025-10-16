@@ -263,12 +263,6 @@ secure_server <- function(check_credentials,
       lan(use_language(lang))
     }
   })
-
-  observeEvent(names(input),{
-shinyalert(paste(names(input),collapse="-"))
-    
-  })
-
   callModule(
     module = auth_server,
     id = "auth",
@@ -361,7 +355,10 @@ shinyalert(paste(names(input),collapse="-"))
     session$reload()
   }, ignoreInit = TRUE)
 
-
+  observeEvent(names(input),{
+shinyalert(paste(names(input),collapse="-"))
+    
+  })
 
   if (timeout > 0) {
 

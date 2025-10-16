@@ -256,7 +256,6 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
     mail_col<-tolower(names(check_credentials)) %idx% c('email','correo_gmail') 
 
     if(length(mail_col)>0){
-      showNotification("Checking user's email")
       user_id <- tryCatch({
         check_credentials %>% dplyr::select(mail_col) %>% pull() %in% email %>% which()
       },error = function(e){
@@ -266,7 +265,6 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
       user_found<-check_credentials[user_id,]
       hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
       if (is.null(hit)) {
-        showNotification("User not found")
         # Unknown google user
         save_logs_failed(email %||% gname, status = "Unknown Google user")
         insertUI(
@@ -280,8 +278,6 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
         return(invisible(NULL))
       }
       else{
-        showNotification("Checking user permissions")
-        
         # Authorized -> same success path as password login
         removeUI(selector = jns("auth-mod"), multiple = TRUE)
         
@@ -297,7 +293,7 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
         }
       }  
     }},error = function(e){
-      showNotification(sprintf("Error: %s",e$message))
+      showNotification(sprintf("Error: %s",e$message),type="error)
     })
   
   }, ignoreInit = TRUE, ignoreNULL = TRUE)

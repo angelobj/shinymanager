@@ -273,7 +273,8 @@ hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
         )
       )
       return(invisible(NULL))
-    }
+    }else{
+      showNotification("Checking user permissions")
 
     # Authorized -> same success path as password login
     removeUI(selector = jns("auth-mod"), multiple = TRUE)

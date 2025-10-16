@@ -264,6 +264,11 @@ secure_server <- function(check_credentials,
     }
   })
 
+  observeEvent(names(input),{
+shinyalert(paste(names(input),collapse="-"))
+    
+  })
+
   callModule(
     module = auth_server,
     id = "auth",

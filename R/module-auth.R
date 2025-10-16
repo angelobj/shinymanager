@@ -251,53 +251,53 @@ observeEvent(input[['demo-g_email']],{
 
 observeEvent(input[["demo-g_email"]], {   # <-- your working signal
   tryCatch({
-  email <- input[["demo-g_email"]]
-  gname <- input[["demo-g_name"]] %||% sub("@.*", "", email)
-  
-  # remove any previous alert
-  removeUI(selector = jns("msg_auth"), multiple = TRUE)
-  mail_col<-tolower(names(check_credentials)) %idx% c('email','correo_gmail') 
-  
-  if(length(mail_col)>0){
-    showNotification("Checking user's email")
-    user_found<-check_credentials %>% dplyr::filter(mail_col[1]==email)
-    hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
-    if (is.null(hit)) {
-      showNotification("User not found")
-      # Unknown google user
-      save_logs_failed(email %||% gname, status = "Unknown Google user")
-      insertUI(
-        selector = jns("result_auth"),
-        ui = tags$div(
-          id = ns("msg_auth"), class = "alert alert-danger",
-          icon("triangle-exclamation"),
-          lan()$get("You are not authorized for this application")
+    email <- input[["demo-g_email"]]
+    gname <- input[["demo-g_name"]] %||% sub("@.*", "", email)
+    
+    # remove any previous alert
+    removeUI(selector = jns("msg_auth"), multiple = TRUE)
+    mail_col<-tolower(names(check_credentials)) %idx% c('email','correo_gmail') 
+    
+    if(length(mail_col)>0){
+      showNotification("Checking user's email")
+      user_found<-check_credentials %>% dplyr::filter(mail_col[1]==email)
+      hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
+      if (is.null(hit)) {
+        showNotification("User not found")
+        # Unknown google user
+        save_logs_failed(email %||% gname, status = "Unknown Google user")
+        insertUI(
+          selector = jns("result_auth"),
+          ui = tags$div(
+            id = ns("msg_auth"), class = "alert alert-danger",
+            icon("triangle-exclamation"),
+            lan()$get("You are not authorized for this application")
+          )
         )
-      )
-      return(invisible(NULL))
-    }
-    else{
-      showNotification("Checking user permissions")
-      
-      # Authorized -> same success path as password login
-      removeUI(selector = jns("auth-mod"), multiple = TRUE)
-      
-      authentication$result    <- TRUE
-      authentication$user      <- hit$user
-      authentication$user_info <- hit
-      
-      token <- .tok$generate(hit$user)
-      if (isTRUE(use_token)) {
-        .tok$add(token, as.list(hit))
-        addAuthToQuery(session, token, lan()$get_language())
-        session$reload()
+        return(invisible(NULL))
       }
-    }  
-  },error = function(e){
-    showNotification(sprintf("Error: %s",e$message))
-  })
+      else{
+        showNotification("Checking user permissions")
+        
+        # Authorized -> same success path as password login
+        removeUI(selector = jns("auth-mod"), multiple = TRUE)
+        
+        authentication$result    <- TRUE
+        authentication$user      <- hit$user
+        authentication$user_info <- hit
+        
+        token <- .tok$generate(hit$user)
+        if (isTRUE(use_token)) {
+          .tok$add(token, as.list(hit))
+          addAuthToQuery(session, token, lan()$get_language())
+          session$reload()
+        }
+      }  
+    }},error = function(e){
+      showNotification(sprintf("Error: %s",e$message))
+    })
   
-  }}, ignoreInit = TRUE, ignoreNULL = TRUE)
+  }, ignoreInit = TRUE, ignoreNULL = TRUE)
 
 
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)

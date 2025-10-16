@@ -249,11 +249,6 @@ auth_server <- function(input, output, session,
 # IMPORTANT: inside a module server, DO NOT wrap with ns()
 sign_ins <- callModule(googleSignIn, "demo")
 
-# Prove this auth_server is the one running
-observe({
-  showNotification("auth_server (LOCAL) is wired", type = "message", duration = 3)
-}, once = TRUE)
-
 # Debug: button that mimics a Google success payload
 observeEvent(input$demo_debug_click, {
   # if your googleSignIn module returns a list(name=..., email=...), mimic that:
@@ -262,32 +257,6 @@ observeEvent(input$demo_debug_click, {
   # Try to process it as if it came from sign_ins()
   # (use the same logical path you intend to use later)
 }, ignoreInit = TRUE)
-
-# Safely inspect sign_ins() changes (login/logout)
-observeEvent(sign_ins(), {
-  info <- sign_ins()
-  if (is.null(info)) {
-    showNotification("Google: signed out (sign_ins() == NULL)", type = "message")
-    return()
-  }
-  nm <- info$name  %||% ""
-  em <- info$email %||% ""
-  showNotification(sprintf("Google: %s <%s>", nm, em), type = "message")
-  cat("\n[DEBUG] sign_ins():\n"); str(info)
-}, ignoreInit = TRUE)
-
-# If you specifically want to react only when email appears/changes:
-email <- reactiveVal(NULL)
-observeEvent(sign_ins(), {
-  info <- sign_ins()
-  email( if (!is.null(info)) (info$email %||% NULL) else NULL )
-}, ignoreInit = TRUE)
-observeEvent(email(), {
-  em <- email()
-  if (is.null(em) || !nzchar(em)) return()
-  showNotification(paste("Email:", em), type = "message")
-}, ignoreInit = TRUE)
-  
 
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 

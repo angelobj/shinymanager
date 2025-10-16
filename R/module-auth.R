@@ -256,7 +256,7 @@ observeEvent(input$demo_debug_click, {
   showNotification(sprintf("DBG fired: %s <%s>", fake$name, fake$email), type="warning")
   # Try to process it as if it came from sign_ins()
   # (use the same logical path you intend to use later)
-  showNotification(paste(names(input),collapse="-"))
+  showNotification(paste(names(input),collapse="//"))
 }, ignoreInit = TRUE)
 
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)

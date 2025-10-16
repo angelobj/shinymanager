@@ -355,11 +355,6 @@ secure_server <- function(check_credentials,
     session$reload()
   }, ignoreInit = TRUE)
 
-  observeEvent(names(input),{
-shinyalert(paste(names(input),collapse="-"))
-    
-  })
-
   if (timeout > 0) {
 
     observeEvent(session$input$.shinymanager_timeout, {

@@ -249,6 +249,12 @@ observeEvent(sign_ins(), {
   showNotification(sprintf("Signed in as %s <%s>", info$name %||% "", info$email %||% ""), type = "message")
   print(str(info))  # to console for debugging
 }, ignoreInit = TRUE)
+
+  observeEvent(sign_ins()$email, {
+  email <- sign_ins()$email
+  req(email, nzchar(email))
+  showNotification(paste("Email:", email))
+}, ignoreInit = TRUE)
   
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 

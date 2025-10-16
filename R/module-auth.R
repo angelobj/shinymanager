@@ -239,9 +239,16 @@ auth_server <- function(input, output, session,
 
   sign_ins <- shiny::callModule(googleSignIn, ns("demo"))
 
-  observeEvent(sign_ins(),{
-    showNotification(paste(names(sign_ins()),collapse=" - "))
-  })
+observeEvent(sign_ins(), {
+  info <- sign_ins()
+  if (is.null(info)) {
+    showNotification("Signed out", type = "message")
+    return()
+  }
+  # expected: info$name, info$email
+  showNotification(sprintf("Signed in as %s <%s>", info$name %||% "", info$email %||% ""), type = "message")
+  print(str(info))  # to console for debugging
+}, ignoreInit = TRUE)
   
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 

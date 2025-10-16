@@ -249,21 +249,14 @@ auth_server <- function(input, output, session,
 # IMPORTANT: inside a module server, DO NOT wrap with ns()
 sign_ins <- callModule(googleSignIn, "demo")
 
-# Debug: button that mimics a Google success payload
-observeEvent(input$demo_debug_click, {
-  # if your googleSignIn module returns a list(name=..., email=...), mimic that:
-  fake <- list(name = "DBG User", email = "debug@iboticario.cl", when = Sys.time())
-  showNotification(sprintf("DBG fired: %s <%s>", fake$name, fake$email), type="warning")
-  # Try to process it as if it came from sign_ins()
-  # (use the same logical path you intend to use later)
-  showNotification(paste(names(input),collapse="//"))
-}, ignoreInit = TRUE)
-
-  observeEvent(input[['demo-g_email']],{
-    showNotification(input[['demo-g_email']])
-    showNotification(paste(input[['demo-g_name']],collapse=", "))
-    
-    },ignoreNULL=T,ignoreInit=T)
+observeEvent(input[['demo-g_email']],{
+    showNotification(paste(input[['demo-g_name']],
+                           "(",
+                           input[['demo-g_email']],
+                           ")"
+                          )
+                    )
+},ignoreNULL=T,ignoreInit=T)
 
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 

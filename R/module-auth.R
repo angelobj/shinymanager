@@ -257,9 +257,9 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
 
 
     showNotification(paste("Class",class(check_credentials)))
-    showNotification(paste0(,names(check_credentials),sep=" - ",))
+    showNotification(paste0(names(check_credentials),sep=" - "))
     
-    showNotification(paste0(names(mail_col),sep=" - ",))
+    showNotification(paste0(names(mail_col),sep=" - "))
     
     if(length(mail_col)>0){
       showNotification("Checking user's email")

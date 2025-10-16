@@ -255,11 +255,9 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
     removeUI(selector = jns("msg_auth"), multiple = TRUE)
     mail_col<-tolower(names(check_credentials)) %idx% c('email','correo_gmail') 
 
-    showNotification(paste0(mail_col,sep=" - "))
-    
     if(length(mail_col)>0){
       showNotification("Checking user's email")
-      user_found<-check_credentials %>% dplyr::filter(mail_col[1]==email)
+      user_found<-credentials %>% dplyr::filter(credentials[,mail_col]=='angelobj@gmail.com')
       hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
       if (is.null(hit)) {
         showNotification("User not found")

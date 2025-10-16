@@ -254,15 +254,6 @@ observe({
   showNotification("auth_server (LOCAL) is wired", type = "message", duration = 3)
 }, once = TRUE)
 
-# Prove the child id "demo" exists and list inputs under it
-observe({
-  # All inputs visible to this module
-  ids <- names(input)
-  demo_prefix <- paste0(session$ns("demo"), "-") # parentns-demo-
-  demo_ids <- ids[startsWith(ids, demo_prefix)]
-  cat("\n[DEBUG] inputs in demo namespace:\n"); print(demo_ids)
-})
-
 # Debug: button that mimics a Google success payload
 observeEvent(input$demo_debug_click, {
   # if your googleSignIn module returns a list(name=..., email=...), mimic that:

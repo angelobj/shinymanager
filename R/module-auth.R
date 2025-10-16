@@ -134,18 +134,11 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
                             )
                       )
                 ),
-column(5,
-  tags$div(
-    class = "gray-box",
-    googleSignInUI(id = ns("demo"), logout_name = "Sign Out", logout_class = "btn-danger"),
-    tags$hr(),
-    # DEBUG: a test trigger that lives under the same child id ("demo")
-    actionButton(ns("demo_debug_click"), "Debug: pretend Google login"),
-    tags$small(style="display:block;margin-top:6px;color:#666;",
-      "If this button works but Google does not, the issue is inside the googleSignIn module/JS."
-    )
-  )
-)
+                column(5,
+                  tags$div(class = "gray-box",
+                    googleSignInUI(id = ns("demo"), logout_name = "Sign Out", logout_class = "btn-danger")
+                  )
+                )
               ),
               tags$br(), tags$br(),
                 tags$script(
@@ -250,12 +243,7 @@ auth_server <- function(input, output, session,
 sign_ins <- callModule(googleSignIn, "demo")
 
 observeEvent(input[['demo-g_email']],{
-    showNotification(paste(input[['demo-g_name']],
-                           "(",
-                           input[['demo-g_email']],
-                           ")"
-                          )
-                    )
+    showNotification(sprintf("%s (%s)",input[['demo-g_name']],input[['demo-g_email']]))
 },ignoreNULL=T,ignoreInit=T)
 
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)

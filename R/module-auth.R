@@ -249,17 +249,17 @@ observeEvent(input[['demo-g_email']],{
 },ignoreNULL=T,ignoreInit=T)
 
 observeEvent(input[["demo-g_email"]], {   # <-- your working signal
-    email <- input[["demo-g_email"]]
-    gname <- input[["demo-g_name"]] %||% sub("@.*", "", email)
-
-    # remove any previous alert
-    removeUI(selector = jns("msg_auth"), multiple = TRUE)
-mail_col<-tolower(names(check_credentials)) %id% c('email','correo_gmail') 
+  email <- input[["demo-g_email"]]
+  gname <- input[["demo-g_name"]] %||% sub("@.*", "", email)
   
-if(length(mail_col)>0){
-showNotification("Checking user's email")
-user_found<-check_credentials %>% dplyr::filter(mail_col[1]==email)
-hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
+  # remove any previous alert
+  removeUI(selector = jns("msg_auth"), multiple = TRUE)
+  mail_col<-tolower(names(check_credentials)) %id% c('email','correo_gmail') 
+  
+  if(length(mail_col)>0){
+    showNotification("Checking user's email")
+    user_found<-check_credentials %>% dplyr::filter(mail_col[1]==email)
+    hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
     if (is.null(hit)) {
       showNotification("User not found")
       # Unknown google user
@@ -273,24 +273,26 @@ hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
         )
       )
       return(invisible(NULL))
-    }else{
-      showNotification("Checking user permissions")
-
-    # Authorized -> same success path as password login
-    removeUI(selector = jns("auth-mod"), multiple = TRUE)
-
-    authentication$result    <- TRUE
-    authentication$user      <- hit$user
-    authentication$user_info <- hit
-
-    token <- .tok$generate(hit$user)
-    if (isTRUE(use_token)) {
-      .tok$add(token, as.list(hit))
-      addAuthToQuery(session, token, lan()$get_language())
-      session$reload()
     }
-}
-}, ignoreInit = TRUE, ignoreNULL = TRUE)
+    else{
+      showNotification("Checking user permissions")
+      
+      # Authorized -> same success path as password login
+      removeUI(selector = jns("auth-mod"), multiple = TRUE)
+      
+      authentication$result    <- TRUE
+      authentication$user      <- hit$user
+      authentication$user_info <- hit
+      
+      token <- .tok$generate(hit$user)
+      if (isTRUE(use_token)) {
+        .tok$add(token, as.list(hit))
+        addAuthToQuery(session, token, lan()$get_language())
+        session$reload()
+      }
+    }
+  }}, ignoreInit = TRUE, ignoreNULL = TRUE)
+
 
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 

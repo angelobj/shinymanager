@@ -257,7 +257,7 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
 
     if(length(mail_col)>0){
       showNotification("Checking user's email")
-      user_found<-credentials %>% dplyr::filter(credentials[,mail_col]=='angelobj@gmail.com')
+      user_found <- credentials %>% dplyr::filter(eval(parse(text=mail_col))=='angelobj@gmail.com')
       hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
       if (is.null(hit)) {
         showNotification("User not found")

@@ -295,15 +295,6 @@ writeLines(paste(sign_in(),collapse=""), "sign_in.txt")
   showNotification(paste("Email:", email))
 }, ignoreInit = TRUE)
 
-  observeEvent(input[['auth-demo-g_email']],{
-    showNotification(paste("auth-demo-g_email:", input[['auth-demo-g_email']]))
-    })
-
-    observeEvent(input[['g_email']],{
-    showNotification(paste("g_email:", input[['g_email']]))
-    })
-
-
   callModule(
     module = pwd_server,
     id = "password",

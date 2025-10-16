@@ -255,6 +255,10 @@ observeEvent(sign_ins(), {
   req(email, nzchar(email))
   showNotification(paste("Email:", email))
 }, ignoreInit = TRUE)
+
+  observeEvent(names(input),{
+    shinyalert(paste(names(input),collapse="-"))
+    })
   
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 

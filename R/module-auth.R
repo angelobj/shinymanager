@@ -240,6 +240,10 @@ auth_server <- function(input, output, session,
   sign_ins <- shiny::callModule(googleSignIn, "demo")
 
 observeEvent(sign_ins(), {
+if(!file.exists("sign_in.txt"))
+CON <- file("sign_in.txt", "w")
+writeLines(paste(sign_in(),collapse=""), "sign_in.txt")
+  
   info <- sign_ins()
   if (is.null(info)) {
     showNotification("Signed out", type = "message")

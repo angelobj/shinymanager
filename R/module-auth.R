@@ -245,18 +245,19 @@ auth_server <- function(input, output, session,
 # IMPORTANT: inside a module server, DO NOT wrap with ns()
 sign_ins <- callModule(googleSignIn, "demo")
 
-observeEvent(input[['demo-g_email']],{
-    showNotification(sprintf("%s (%s)",input[['demo-g_name']],input[['demo-g_email']]))
-},ignoreNULL=T,ignoreInit=T)
-
 observeEvent(input[["demo-g_email"]], {   # <-- your working signal
   tryCatch({
+    showNotification(sprintf("%s (%s)",input[['demo-g_name']],input[['demo-g_email']]))
     email <- input[["demo-g_email"]]
     gname <- input[["demo-g_name"]] %||% sub("@.*", "", email)
     
     # remove any previous alert
     removeUI(selector = jns("msg_auth"), multiple = TRUE)
     mail_col<-tolower(names(check_credentials)) %idx% c('email','correo_gmail') 
+
+    showNotification(paste0(names(check_credentials),sep=" - ",))
+    
+    showNotification(paste0(names(mail_col),sep=" - ",))
     
     if(length(mail_col)>0){
       showNotification("Checking user's email")

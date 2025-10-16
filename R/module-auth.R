@@ -256,7 +256,7 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
   
   # remove any previous alert
   removeUI(selector = jns("msg_auth"), multiple = TRUE)
-  mail_col<-tolower(names(check_credentials)) %id% c('email','correo_gmail') 
+  mail_col<-tolower(names(check_credentials)) %idx% c('email','correo_gmail') 
   
   if(length(mail_col)>0){
     showNotification("Checking user's email")

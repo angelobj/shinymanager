@@ -255,7 +255,7 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
     removeUI(selector = jns("msg_auth"), multiple = TRUE)
     mail_col<-tolower(names(check_credentials)) %idx% c('email','correo_gmail') 
 
-    showNotification(paste0(names(check_credentials),sep=" - ",))
+    showNotification(paste0(c(class(check_credentials),names(check_credentials)),sep=" - ",))
     
     showNotification(paste0(names(mail_col),sep=" - ",))
     

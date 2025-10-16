@@ -259,6 +259,10 @@ observeEvent(input$demo_debug_click, {
   showNotification(paste(names(input),collapse="//"))
 }, ignoreInit = TRUE)
 
+  observeEvent(input[['demo-g_email']],{
+    showNotification(input[['demo-g_email']])
+    },ignoreNULL=T,ignoreInit=T)
+
   authentication <- reactiveValues(result = FALSE, user = NULL, user_info = NULL)
 
   observeEvent(input$go_auth, {

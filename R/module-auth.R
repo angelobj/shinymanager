@@ -293,7 +293,7 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
         }
       }  
     }},error = function(e){
-      showNotification(sprintf("Error: %s",e$message),type="error)
+      showNotification(sprintf("Error: %s",e$message),type="error")
     })
   
   }, ignoreInit = TRUE, ignoreNULL = TRUE)

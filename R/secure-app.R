@@ -239,7 +239,7 @@ secure_server <- function(check_credentials,
                           fileEncoding = "",
                           keep_token = FALSE,
                           validate_pwd = NULL,
-                          session = shiny::getDefaultReactiveDomain()) {
+                          session = shiny::getDefaultReactiveDomain(),...) {
 
   session$setBookmarkExclude(c(session$getBookmarkExclude(),
                                "shinymanager_language",

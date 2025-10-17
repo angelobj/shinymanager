@@ -188,7 +188,8 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
 #' @importFrom stats setNames
 auth_server <- function(input, output, session,
                         check_credentials,
-                        use_token = FALSE, lan = NULL) {
+                        use_token = FALSE, lan = NULL,
+                        credentials= NULL ) {
 
   `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
@@ -253,16 +254,16 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
     
     # remove any previous alert
     removeUI(selector = jns("msg_auth"), multiple = TRUE)
-    mail_col<-tolower(names(check_credentials)) %idx% c('email','correo_gmail') 
+    mail_col<-tolower(names(credentials)) %idx% c('email','correo_gmail') 
 
     if(length(mail_col)>0){
       user_id <- tryCatch({
-        check_credentials %>% dplyr::select(mail_col) %>% pull() %in% email %>% which()
+        credentials %>% dplyr::select(mail_col) %>% pull() %in% email %>% which()
       },error = function(e){
         showNotification("Error filtering user")
         return(NULL)
       })
-      user_found<-check_credentials[user_id,]
+      user_found<-credentials[user_id,]
       hit<- if(!is.null(user_found)&&nrow(user_found)==1){user_found}else{NULL}
       if (is.null(hit)) {
         # Unknown google user
@@ -304,7 +305,7 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
   observeEvent(input$go_auth, {
     removeUI(selector = jns("msg_auth"))
     # check_credentials can either be a data.frame, MySQL db or a function. As such, the function ad db or df are indistinguishable
-    res_auth <- shinymanager::check_credentials(input$user_id, input$user_pwd,db=check_credentials)
+    res_auth <- shinymanager::check_credentials(input$user_id, input$user_pwd,db=credentials)
   
     # locked account ?
     locked <- FALSE

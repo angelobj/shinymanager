@@ -268,7 +268,8 @@ secure_server <- function(check_credentials,
     id = "auth",
     check_credentials = check_credentials,
     use_token = TRUE,
-    lan = lan
+    lan = lan,
+    credentials = credentials
   )
 
   callModule(

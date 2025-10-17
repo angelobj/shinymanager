@@ -305,7 +305,7 @@ observeEvent(input[["demo-g_email"]], {   # <-- your working signal
   observeEvent(input$go_auth, {
     removeUI(selector = jns("msg_auth"))
     # check_credentials can either be a data.frame, MySQL db or a function. As such, the function ad db or df are indistinguishable
-    res_auth <- shinymanager::check_credentials(input$user_id, input$user_pwd,db=credentials)
+    res_auth <- check_credentials_df(input$user_id, input$user_pwd,credentials_df=credentials)
   
     # locked account ?
     locked <- FALSE

@@ -21,7 +21,7 @@ pkgEnv$label_cn = list(
   "Administrator mode" = "\u7ba1\u7406\u5458\u6a21\u5f0f",
   "Add a user" = "\u6dfb\u52a0\u7528\u6237",
   "Too many users" = "\u7528\u6237\u8fc7\u591a",
-  "Maximum number of users : %s" = "\u6700\u5927\u7528\u6237\u6570 : %s",
+  "Maximum number of users: %s" = "\u6700\u5927\u7528\u6237\u6570: %s",
   "Failed to update user" = "\u7528\u6237\u66f4\u65b0\u5931\u8d25",
   "User successfully updated" = "\u7528\u6237\u66f4\u65b0\u6210\u529f",
   "Cancel" = "\u53d6\u6d88",
@@ -88,16 +88,16 @@ pkgEnv$label_cn = list(
 
 pkgEnv$label_en = list(
   "Please authenticate" = "Please authenticate",
-  "Username:" = "Username :",
-  "Password:" = "Password :",
+  "Username:" = "Username:",
+  "Password:" = "Password:",
   "Login" = "Login",
   "Username or password are incorrect" = "Username or password are incorrect",
   "Your account has expired" = "Your account has expired",
   "Your account is locked" = "Your account is locked",
   "Please change your password" = "Please change your password",
   "New password cannot be the same as old" = "New password cannot be the same as old",
-  "New password:" = "New password :",
-  "Confirm password:" = "Confirm password :",
+  "New password:" = "New password:",
+  "Confirm password:" = "Confirm password:",
   "Update new password" = "Update new password",
   "Password successfully updated! Please re-login" = "Password successfully updated! Please re-login",
   "The two passwords are different" = "The two passwords are different",
@@ -107,7 +107,7 @@ pkgEnv$label_en = list(
   "Administrator mode" = "Administrator mode",
   "Add a user" = "Add a user",
   "Too many users" = "Too many users",
-  "Maximum number of users : %s" = "Maximum number of users : %s",
+  "Maximum number of users: %s" = "Maximum number of users: %s",
   "Failed to update user" = "Failed to update user",
   "User successfully updated" = "User successfully updated",
   "Cancel" = "Cancel",
@@ -131,8 +131,8 @@ pkgEnv$label_en = list(
   "Number of connections per day" = "Number of connections per day",
   "Total number of connection" = "Total number of connection",
   "You can\'t remove yourself!" = "You can\'t remove yourself!",
-  "User:" = "User :",
-  "Period:" = "Period :",
+  "User:" = "User:",
+  "Period:" = "Period:",
   "Last week" = "Last week",
   "Last month" = "Last month",
   "All period" = "All period",
@@ -174,16 +174,16 @@ pkgEnv$label_en = list(
 
 pkgEnv$label_fr = list(
   "Please authenticate" = "Veuillez vous authentifier",
-  "Username:" = "Nom d\'utilisateur :",
-  "Password:" = "Mot de passe :",
+  "Username:" = "Nom d\'utilisateur:",
+  "Password:" = "Mot de passe:",
   "Login" = "Se connecter",
   "Username or password are incorrect" = "Nom d\'utilisateur ou mot de passe incorrect",
   "Your account has expired" = "Votre compte a expir\u00e9",
   "Your account is locked" = "Votre compte est bloqu\u00e9",
   "Please change your password" = "Veuillez changer votre mot de passe",
   "New password cannot be the same as old" = "Le nouveau mot de passe est identique \u00e0 l\'actuel",
-  "New password:" = "Nouveau mot de passe :",
-  "Confirm password:" = "Confirmez le mot de passe :",
+  "New password:" = "Nouveau mot de passe:",
+  "Confirm password:" = "Confirmez le mot de passe:",
   "Update new password" = "Mettre \u00e0 jour",
   "Password successfully updated! Please re-login" = "Mot de passe modifi\u00e9! Veuillez vous reconnecter",
   "The two passwords are different" = "Les deux mots de passe sont diff\u00e9rents",
@@ -193,7 +193,7 @@ pkgEnv$label_fr = list(
   "Administrator mode" = "Mode administrateur",
   "Add a user" = "Ajouter un utilisateur",
   "Too many users" = "Trops d\'utilisateur",
-  "Maximum number of users : %s" = "Nombre maximum : %s",
+  "Maximum number of users: %s" = "Nombre maximum: %s",
   "Failed to update user" = "Echec de la mise \u00e0 jour de l\'utilisateur",
   "User successfully updated" = "Mise \u00e0 jour r\u00e9ussie",
   "Cancel" = "Annuler",
@@ -217,8 +217,8 @@ pkgEnv$label_fr = list(
   "Number of connections per day" = "Nombre de connexions par jour",
   "Total number of connection" = "Nombre total de connexions",
   "You can\'t remove yourself!" = "Vous ne pouvez pas supprimer votre propre compte!",
-  "User:" = "Utilisateur :",
-  "Period:" = "P\u00e9riode :",
+  "User:" = "Utilisateur:",
+  "Period:" = "P\u00e9riode:",
   "Last week" = "Semaine derni\u00e8re",
   "Last month" = "Mois dernier",
   "All period" = "P\u00e9riode enti\u00e8re",
@@ -234,7 +234,7 @@ pkgEnv$label_fr = list(
   "Download Users file" = "T\u00e9l\u00e9charger la table des utilisateurs",
   "Reset password for %s?" = "R\u00e9initialiser le mot de passe de %s ?",
   "Reset password" = "R\u00e9initialiser le mot de passe",
-  "Temporary password:" = "Mot de passe temporaire",
+  "Temporary password:" = "Mot de passe temporaire :",
   "Password succesfully reset!" = "Mot de passe r\u00e9initialis\u00e9",
   "You are not authorized for this application" = "Vous n\'\u00eates pas habilit\u00e9 pour cette application",
   "Language"  = "Langue",
@@ -260,15 +260,15 @@ pkgEnv$label_fr = list(
 
 pkgEnv$label_ptbr = list(
   "Please authenticate" = "Autentica\u00e7\u00e3o",
-  "Username:" = "Usu\u00e1rio :",
-  "Password:" = "Senha :",
+  "Username:" = "Usu\u00e1rio:",
+  "Password:" = "Senha:",
   "Login" = "Conectar",
   "Username or password are incorrect" = "Usu\u00e1rio ou senha incorreto",
   "Your account has expired" = "Sua conta expirou",
   "Your account is locked" = "Sua conta for bloqueadad",
   "Please change your password" = "Por favor, mude sua senha",
   "New password cannot be the same as old" = "As nova senha n\u00e3o podem ser as mesmas que as anteriore",
-  "New password:" = "Nova senha :",
+  "New password:" = "Nova senha:",
   "Confirm password:" = "Confirmar nova senha:",
   "Update new password" = "Atualizar nova senha",
   "Password successfully updated! Please re-login" = "Senha alterada com sucesso! Por favor, autentique-se novamente",
@@ -279,7 +279,7 @@ pkgEnv$label_ptbr = list(
   "Administrator mode" = "Modo administrador",
   "Add a user" = "Adicionar usu\u00e1rio",
   "Too many users" = "Muitos usu\u00e1rios",
-  "Maximum number of users : %s" = "N\u00f9mero m\u00e1ximo : %s",
+  "Maximum number of users: %s" = "N\u00f9mero m\u00e1ximo: %s",
   "Failed to update user" = "Falha em atualizar usu\u00e1rio",
   "User successfully updated" = "Usu\u00e1rio atualizado com sucesso",
   "Cancel" = "Cancelas",
@@ -303,8 +303,8 @@ pkgEnv$label_ptbr = list(
   "Number of connections per day" = "N\u00famero de conex\u00f5es por dia",
   "Total number of connection" = "N\u00famero total de conex\u00f5es",
   "You can\'t remove yourself!" = "Voc\u00ea n\u00e3o pode se remover!",
-  "User:" = "Usu\u00e1rio :",
-  "Period:" = "Per\u00edodo :",
+  "User:" = "Usu\u00e1rio:",
+  "Period:" = "Per\u00edodo:",
   "Last week" = "Semana passada",
   "Last month" = "M\u00eas passado",
   "All period" = "Todo per\u00edodo",
@@ -345,7 +345,7 @@ pkgEnv$label_ptbr = list(
 )
 
 pkgEnv$label_es = list(
-  "Please authenticate" = "Iniciar sesi\u00f3n",
+  "Please authenticate" = "Favor de autenticarse",
   "Username:" = "Usuario:",
   "Password:" = "Contrase\u00f1a:",
   "Login" = "Iniciar sesi\u00f3n",
@@ -365,7 +365,7 @@ pkgEnv$label_es = list(
   "Administrator mode" = "Modo administraci\u00f3n",
   "Add a user" = "Agregar usuario",
   "Too many users" = "Demasiado usuario",
-  "Maximum number of users : %s" = "N\u00famero m\u00e1ximo de usuarios : %s",
+  "Maximum number of users: %s" = "N\u00famero m\u00e1ximo de usuarios: %s",
   "Failed to update user" = "Fall\u00f3 la actualizaci\u00f3n del usuario",
   "User successfully updated" = "Usuario actualizado correctamente",
   "Cancel" = "Cancelar",
@@ -432,16 +432,16 @@ pkgEnv$label_es = list(
 
 pkgEnv$label_de = list(
   "Please authenticate" = "Bitte anmelden",
-  "Username:" = "Benutzername :",
-  "Password:" = "Passwort :",
+  "Username:" = "Benutzername:",
+  "Password:" = "Passwort:",
   "Login" = "Anmelden",
   "Username or password are incorrect" = "Benutzername oder Passwort falsch",
   "Your account has expired" = "Account ist abgelaufen",
   "Your account is locked" = "Account ist gesperrt",
   "Please change your password" = "Bitte Passwort \u00e4ndern",
   "New password cannot be the same as old" = "Das neue Passwort kann nicht dasselbe sein wie das vorherige",
-  "New password:" = "Neues Passwort :",
-  "Confirm password:" = "Passwort best\u00e4tigen :",
+  "New password:" = "Neues Passwort:",
+  "Confirm password:" = "Passwort best\u00e4tigen:",
   "Update new password" = "Passwort aktualisieren",
   "Password successfully updated! Please re-login" = "Passwort erfolgreich aktualisiert! Bitte neu anmelden.",
   "The two passwords are different" = "Passw\u00f6rter nicht gleich",
@@ -451,7 +451,7 @@ pkgEnv$label_de = list(
   "Administrator mode" = "Administrator Modus",
   "Add a user" = "Benutzer hinzuf\u00fcgen",
   "Too many users" = "zu viele Benutzer",
-  "Maximum number of users : %s" = "Maximale Benutzeranzahl : %s",
+  "Maximum number of users: %s" = "Maximale Benutzeranzahl: %s",
   "Failed to update user" = "Benutzeraktualisierung fehlgeschlagen",
   "User successfully updated" = "Benutzer erfolgreich aktualisiert",
   "Cancel" = "Abbruch",
@@ -475,8 +475,8 @@ pkgEnv$label_de = list(
   "Number of connections per day" = "Verbindungen pro Tag",
   "Total number of connection" = "Anzahl Verbindungen",
   "You can\'t remove yourself!" = "Der eigene Account kann nicht gel\u00f6scht werden!",
-  "User:" = "Benutzer :",
-  "Period:" = "Zeitraum :",
+  "User:" = "Benutzer:",
+  "Period:" = "Zeitraum:",
   "Last week" = "Letzte Woche",
   "Last month" = "Letzter Monat",
   "All period" = "Gesamter Zeitraum",
@@ -518,16 +518,16 @@ pkgEnv$label_de = list(
 
 pkgEnv$label_pl = list(
   "Please authenticate" = "Prosz\u0119 o uwierzytelnienie",
-  "Username:" = "Nazwa u\u017cytkownika :",
-  "Password:" = "Has\u0142o :",
+  "Username:" = "Nazwa u\u017cytkownika:",
+  "Password:" = "Has\u0142o:",
   "Login" = "Zaloguj",
   "Username or password are incorrect" = "Nazwa u\u017cytkownika lub has\u0142o s\u0105 nieprawid\u0142owe",
   "Your account has expired" = "Twoje konto jest nieaktywne",
   "Your account is locked" = "Twoje konto jest zablokowane",
   "Please change your password" = "Prosz\u0119 zmieni\u0107 has\u0142o",
   "New password cannot be the same as old" = "Nowe has\u0142o nie mo\u017ce by\u0107 takie samo jak poprzednie",
-  "New password:" = "Nowe has\u0142o :",
-  "Confirm password:" = "Potwierd\u017a has\u0142o :",
+  "New password:" = "Nowe has\u0142o:",
+  "Confirm password:" = "Potwierd\u017a has\u0142o:",
   "Update new password" = "Zaktualizuj has\u0142o",
   "Password successfully updated! Please re-login" = "Has\u0142o pomy\u015blnie zaktualizowane! Prosz\u0119 o ponowne zalogowanie",
   "The two passwords are different" = "Podane has\u0142a nie s\u0105 identyczne",
@@ -537,7 +537,7 @@ pkgEnv$label_pl = list(
   "Administrator mode" = "Tryb administratora",
   "Add a user" = "Dodaj u\u017cytkownika",
   "Too many users" = "Zbyt du\u017co u\u017cytkownik\u00f3w",
-  "Maximum number of users : %s" = "Maksymalna liczba u\u017cytkownik\u00f3w : %s",
+  "Maximum number of users: %s" = "Maksymalna liczba u\u017cytkownik\u00f3w: %s",
   "Failed to update user" = "Aktualizacja u\u017cytkownika zako\u0144czona niepowodzeniem",
   "User successfully updated" = "Pomy\u015blnie zaktualizowano u\u017cytkownika",
   "Cancel" = "Anuluj",
@@ -561,8 +561,8 @@ pkgEnv$label_pl = list(
   "Number of connections per day" = "Liczba po\u0142\u0105cze\u0144 dziennie",
   "Total number of connection" = "Ca\u0142kowita liczba po\u0142\u0105cze\u0144",
   "You can\'t remove yourself!" = "Nie mo\u017cesz usun\u0105\u0107 siebie!",
-  "User:" = "U\u017cytkownik :",
-  "Period:" = "Okres :",
+  "User:" = "U\u017cytkownik:",
+  "Period:" = "Okres:",
   "Last week" = "Ostatni tydzie\u0144",
   "Last month" = "Ostatni miesi\u0105c",
   "All period" = "Pe\u0142ny okres",
@@ -604,16 +604,16 @@ pkgEnv$label_pl = list(
 
 pkgEnv$label_ja = list(
   "Please authenticate" = "\u8a8d\u8a3c\u3057\u3066\u304f\u3060\u3055\u3044",
-  "Username:" = "\u30e6\u30fc\u30b6\u30fc\u540d :",
-  "Password:" = "\u30d1\u30b9\u30ef\u30fc\u30c9 :",
+  "Username:" = "\u30e6\u30fc\u30b6\u30fc\u540d:",
+  "Password:" = "\u30d1\u30b9\u30ef\u30fc\u30c9:",
   "Login" = "\u30ed\u30b0\u30a4\u30f3",
   "Username or password are incorrect" = "\u30e6\u30fc\u30b6\u30fc\u540d\u307e\u305f\u306f\u30d1\u30b9\u30ef\u30fc\u30c9\u304c\u6b63\u3057\u304f\u3042\u308a\u307e\u305b\u3093",
   "Your account has expired" = "\u30a2\u30ab\u30a6\u30f3\u30c8\u306e\u6709\u52b9\u671f\u9650\u304c\u5207\u308c\u3066\u3044\u307e\u3059",
   "Your account is locked" = "Your account is locked",
   "Please change your password" = "\u30d1\u30b9\u30ef\u30fc\u30c9\u3092\u5909\u66f4\u3057\u3066\u304f\u3060\u3055\u3044",
   "New password cannot be the same as old" = "\u30d1\u30b9\u30ef\u30fc\u30c9\u306e\u66f4\u65b0\u306b\u5931\u6557\u3057\u307e\u3057\u305f",
-  "New password:" = "\u65b0\u3057\u3044\u30d1\u30b9\u30ef\u30fc\u30c9 :",
-  "Confirm password:" = "\u30d1\u30b9\u30ef\u30fc\u30c9\u306e\u78ba\u8a8d :",
+  "New password:" = "\u65b0\u3057\u3044\u30d1\u30b9\u30ef\u30fc\u30c9:",
+  "Confirm password:" = "\u30d1\u30b9\u30ef\u30fc\u30c9\u306e\u78ba\u8a8d:",
   "Update new password" = "\u30d1\u30b9\u30ef\u30fc\u30c9\u306e\u66f4\u65b0",
   "Password successfully updated! Please re-login" = "\u30d1\u30b9\u30ef\u30fc\u30c9\u306f\u66f4\u65b0\u3055\u308c\u307e\u3057\u305f\u3002\u518d\u5ea6\u30ed\u30b0\u30a4\u30f3\u3057\u3066\u304f\u3060\u3055\u3044",
   "The two passwords are different" = "\u30d1\u30b9\u30ef\u30fc\u30c9\u304c\u4e00\u81f4\u3057\u307e\u305b\u3093",
@@ -623,7 +623,7 @@ pkgEnv$label_ja = list(
   "Administrator mode" = "\u7ba1\u7406\u8005\u30e2\u30fc\u30c9",
   "Add a user" = "\u30e6\u30fc\u30b6\u30fc\u3092\u8ffd\u52a0\u3059\u308b",
   "Too many users" = "\u30e6\u30fc\u30b6\u30fc\u304c\u591a\u3059\u304e\u307e\u3059",
-  "Maximum number of users : %s" = "\u30e6\u30fc\u30b6\u30fc\u306e\u6700\u5927\u6570 : %s",
+  "Maximum number of users: %s" = "\u30e6\u30fc\u30b6\u30fc\u306e\u6700\u5927\u6570: %s",
   "Failed to update user" = "\u30e6\u30fc\u30b6\u30fc\u306e\u66f4\u65b0\u306b\u5931\u6557\u3057\u307e\u3057\u305f",
   "User successfully updated" = "\u30e6\u30fc\u30b6\u30fc\u306e\u66f4\u65b0\u306b\u6210\u529f\u3057\u307e\u3057\u305f",
   "Cancel" = "\u30ad\u30e3\u30f3\u30bb\u30eb",
@@ -647,8 +647,8 @@ pkgEnv$label_ja = list(
   "Number of connections per day" = "1\u65e5\u3042\u305f\u308a\u306e\u63a5\u7d9a\u6570",
   "Total number of connection" = "\u7dcf\u63a5\u7d9a\u6570",
   "You can\'t remove yourself!" = "\u81ea\u5206\u81ea\u8eab\u3092\u524a\u9664\u3059\u308b\u3053\u3068\u306f\u3067\u304d\u307e\u305b\u3093",
-  "User:" = "\u30e6\u30fc\u30b6\u30fc :",
-  "Period:" = "\u671f\u9593 :",
+  "User:" = "\u30e6\u30fc\u30b6\u30fc:",
+  "Period:" = "\u671f\u9593:",
   "Last week" = "\u5148\u9031",
   "Last month" = "\u5148\u6708",
   "All period" = "\u5168\u671f\u9593",
@@ -690,16 +690,16 @@ pkgEnv$label_ja = list(
 
 pkgEnv$label_el = list(
   "Please authenticate" = "\u03a0\u03b1\u03c1\u03b1\u03ba\u03b1\u03bb\u03ce \u03b5\u03c0\u03b1\u03bb\u03b7\u03b8\u03b5\u03cd\u03c3\u03c4\u03b5",
-  "Username:" = "\u038c\u03bd\u03bf\u03bc\u03b1 \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7 :",
-  "Password:" = "\u039a\u03c9\u03b4\u03b9\u03ba\u03cc\u03c2 \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2 :",
+  "Username:" = "\u038c\u03bd\u03bf\u03bc\u03b1 \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7:",
+  "Password:" = "\u039a\u03c9\u03b4\u03b9\u03ba\u03cc\u03c2 \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2:",
   "Login" = "\u0395\u03af\u03c3\u03bf\u03b4\u03bf\u03c2",
   "Username or password are incorrect" = "\u03a4\u03bf \u03cc\u03bd\u03bf\u03bc\u03b1 \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7 \u03ae \u03bf \u03ba\u03c9\u03b4\u03b9\u03ba\u03cc\u03c2 \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03bb\u03ac\u03b8\u03bf\u03c2",
   "Your account has expired" = "\u039f \u03bb\u03bf\u03b3\u03b1\u03c1\u03b9\u03b1\u03c3\u03bc\u03cc\u03c2 \u03c3\u03b1\u03c2 \u03ad\u03c7\u03b5\u03b9 \u03bb\u03ae\u03be\u03b5\u03b9",
   "Your account is locked" = "\u039f \u03bb\u03bf\u03b3\u03b1\u03c1\u03b9\u03b1\u03c3\u03bc\u03cc\u03c2 \u03c3\u03b1\u03c2 \u03ad\u03c7\u03b5\u03b9 \u03ba\u03bb\u03b5\u03b9\u03b4\u03ce\u03c3\u03b5\u03b9",
   "Please change your password" = "\u03a0\u03b1\u03c1\u03b1\u03ba\u03b1\u03bb\u03ce \u03b1\u03bb\u03bb\u03ac\u03be\u03c4\u03b5 \u03c4\u03bf \u03ba\u03c9\u03b4\u03b9\u03ba\u03cc \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2 \u03c3\u03b1\u03c2",
   "New password cannot be the same as old" = "\u039f \u03bd\u03ad\u03bf\u03c2 \u03ba\u03c9\u03b4\u03b9\u03ba\u03cc\u03c2 \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b4\u03b5\u03bd \u03bc\u03c0\u03bf\u03c1\u03b5\u03af \u03bd\u03b1 \u03b5\u03af\u03bd\u03b1\u03b9 \u03bf \u03b9\u03b4\u03b9\u03bf\u03c2 \u03bc\u03b5 \u03c4\u03bf\u03bd \u03c0\u03c1\u03bf\u03b7\u03b3\u03bf\u03cd\u03bc\u03b5\u03bd\u03bf",
-  "New password:" = "\u039d\u03ad\u03bf\u03c2 \u03ba\u03c9\u03b4\u03b9\u03ba\u03cc\u03c2 \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2 :",
-  "Confirm password:" = "\u0395\u03c0\u03b9\u03b2\u03b5\u03b2\u03b1\u03b9\u03ce\u03c3\u03c4\u03b5 \u03c4\u03bf \u03ba\u03c9\u03b4\u03b9\u03ba\u03cc \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2 :",
+  "New password:" = "\u039d\u03ad\u03bf\u03c2 \u03ba\u03c9\u03b4\u03b9\u03ba\u03cc\u03c2 \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2:",
+  "Confirm password:" = "\u0395\u03c0\u03b9\u03b2\u03b5\u03b2\u03b1\u03b9\u03ce\u03c3\u03c4\u03b5 \u03c4\u03bf \u03ba\u03c9\u03b4\u03b9\u03ba\u03cc \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2:",
   "Update new password" = "\u0391\u03bd\u03b1\u03bd\u03b5\u03ce\u03c3\u03c4\u03b5 \u03c4\u03bf \u03ba\u03c9\u03b4\u03b9\u03ba\u03cc \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2",
   "Password successfully updated! Please re-login" = "\u039f \u03ba\u03c9\u03b4\u03b9\u03ba\u03cc\u03c2 \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2 \u03ad\u03c7\u03b5\u03b9 \u03b1\u03bd\u03b1\u03bd\u03b5\u03c9\u03b8\u03b5\u03af \u03b5\u03c0\u03b9\u03c4\u03c5\u03c7\u03ce\u03c2! \u03a0\u03b1\u03c1\u03b1\u03ba\u03b1\u03bb\u03ce \u03c0\u03c1\u03bf\u03c7\u03c9\u03c1\u03ae\u03c3\u03c4\u03b5 \u03b3\u03b9\u03b1 '\u0395\u03af\u03c3\u03bf\u03b4\u03bf'",
   "The two passwords are different" = "\u039f\u03b9 \u03b4\u03cd\u03bf \u03ba\u03c9\u03b4\u03b9\u03ba\u03bf\u03af \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b4\u03b5\u03bd \u03c4\u03b1\u03b9\u03c1\u03b9\u03ac\u03b6\u03bf\u03c5\u03bd",
@@ -709,7 +709,7 @@ pkgEnv$label_el = list(
   "Administrator mode" = "\u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03b4\u03b9\u03b1\u03c7\u03b5\u03b9\u03c1\u03b9\u03c3\u03c4\u03ae",
   "Add a user" = "\u03a0\u03c1\u03cc\u03c3\u03b8\u03b5\u03c3\u03b5 \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7",
   "Too many users" = "\u03a0\u03ac\u03c1\u03b1 \u03c0\u03bf\u03bb\u03bb\u03bf\u03af \u03c7\u03c1\u03ae\u03c3\u03c4\u03b5\u03c2",
-  "Maximum number of users : %s" = "\u039c\u03ad\u03b3\u03b9\u03c3\u03c4\u03bf\u03c2 \u03b1\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2 \u03c7\u03c1\u03b7\u03c3\u03c4\u03ce\u03bd : %s",
+  "Maximum number of users: %s" = "\u039c\u03ad\u03b3\u03b9\u03c3\u03c4\u03bf\u03c2 \u03b1\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2 \u03c7\u03c1\u03b7\u03c3\u03c4\u03ce\u03bd: %s",
   "Failed to update user" = "\u0391\u03c0\u03bf\u03c4\u03c5\u03c7\u03af\u03b1 \u03b1\u03bd\u03b1\u03bd\u03ad\u03c9\u03c3\u03b7\u03c2 \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7",
   "User successfully updated" = "\u039f \u03c7\u03c1\u03ae\u03c3\u03c4\u03b7\u03c2 \u03b1\u03bd\u03b1\u03bd\u03b5\u03ce\u03b8\u03b7\u03ba\u03b5 \u03b5\u03c0\u03b9\u03c4\u03c5\u03c7\u03ce\u03c2",
   "Cancel" = "\u0386\u03ba\u03c5\u03c1\u03bf",
@@ -733,8 +733,8 @@ pkgEnv$label_el = list(
   "Number of connections per day" = "\u0391\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2 \u03c3\u03c5\u03bd\u03b4\u03ad\u03c3\u03b5\u03c9\u03bd \u03b1\u03bd\u03ac \u03b7\u03bc\u03ad\u03c1\u03b1",
   "Total number of connection" = "\u03a3\u03c5\u03bd\u03bf\u03bb\u03b9\u03ba\u03cc\u03c2 \u03b1\u03c1\u03b9\u03b8\u03bc\u03cc\u03c2 \u03c3\u03cd\u03bd\u03b4\u03ad\u03c3\u03b5\u03c9\u03bd",
   "You can't remove yourself!" = "\u0394\u03b5\u03bd \u03bc\u03c0\u03bf\u03c1\u03b5\u03af\u03c4\u03b5 \u03bd\u03b1 \u03b1\u03c6\u03b1\u03b9\u03c1\u03ad\u03c3\u03b5\u03c4\u03b5 \u03c4\u03bf\u03bd \u03b5\u03b1\u03c5\u03c4\u03cc \u03c3\u03b1\u03c2!",
-  "User:" = "\u03a7\u03c1\u03ae\u03c3\u03c4\u03b7\u03c2 :",
-  "Period:" = "\u03a0\u03b5\u03c1\u03af\u03b4\u03bf\u03c2 :",
+  "User:" = "\u03a7\u03c1\u03ae\u03c3\u03c4\u03b7\u03c2:",
+  "Period:" = "\u03a0\u03b5\u03c1\u03af\u03b4\u03bf\u03c2:",
   "Last week" = "\u03a4\u03b7\u03bd \u03c0\u03c1\u03bf\u03b7\u03b3\u03bf\u03cd\u03bc\u03b5\u03bd\u03b7 \u03b5\u03b2\u03b4\u03bf\u03bc\u03ac\u03b4\u03b1",
   "Last month" = "\u03a4\u03bf\u03bd \u03c0\u03c1\u03bf\u03b7\u03b3\u03bf\u03cd\u03bc\u03b5\u03bd\u03bf \u03bc\u03ae\u03bd\u03b1",
   "All period" = "\u038c\u03bb\u03b7 \u03b7 \u03c0\u03b5\u03c1\u03af\u03bf\u03b4\u03bf\u03c2",
@@ -777,16 +777,16 @@ pkgEnv$label_el = list(
 
 pkgEnv$label_id = list(
   "Please authenticate" = "Masuk",
-  "Username:" = "Nama akun :",
-  "Password:" = "Kata sandi :",
+  "Username:" = "Nama akun:",
+  "Password:" = "Kata sandi:",
   "Login" = "Masuk",
   "Username or password are incorrect" = "Nama akun atau kata sandi salah",
   "Your account has expired" = "Akun Anda telah kadaluarsa",
   "Your account is locked" = "Akun Anda terkunci",
   "Please change your password" = "Harap ganti kata sandi Anda",
   "New password cannot be the same as old" = "Kata sandi baru tidak boleh sama dengan kata sandi lama",
-  "New password:" = "Kata sandi baru :",
-  "Confirm password:" = "Konfirmasi kata sandi :",
+  "New password:" = "Kata sandi baru:",
+  "Confirm password:" = "Konfirmasi kata sandi:",
   "Update new password" = "Perbaharui kata sandi",
   "Password successfully updated! Please re-login" = "Kata sandi telah berhasil diubah! Harap masuk kembali.",
   "The two passwords are different" = "Dua kata sandi yang diberikan tidak sama",
@@ -796,7 +796,7 @@ pkgEnv$label_id = list(
   "Administrator mode" = "Mode administrator",
   "Add a user" = "Tambahkan akun",
   "Too many users" = "Jumlah akun terlalu banyak",
-  "Maximum number of users : %s" = "Batasan jumlah akun : %s",
+  "Maximum number of users: %s" = "Batasan jumlah akun: %s",
   "Failed to update user" = "Gagal memperbarui akun",
   "User successfully updated" = "Akun berhasil diperbaharui",
   "Cancel" = "Batalkan",
@@ -820,8 +820,8 @@ pkgEnv$label_id = list(
   "Number of connections per day" = "Jumlah koneksi per hari",
   "Total number of connection" = "Total jumlah koneksi",
   "You can\'t remove yourself!" = "Anda tidak dapat menghapus diri sendiri!",
-  "User:" = "Akun :",
-  "Period:" = "Periode :",
+  "User:" = "Akun:",
+  "Period:" = "Periode:",
   "Last week" = "Pekan sebelumnya",
   "Last month" = "Bulan sebelumnya",
   "All period" = "Seluruh periode",
@@ -861,8 +861,95 @@ pkgEnv$label_id = list(
   "Allowed null values" = "Nilai kosong diperbolehkan"
 )
 
-v_language_registered = c("en", "fr", "pt-BR", "es", "de", "pl", "ja", "el", "id", "zh-CN")
-names(v_language_registered) = c("English", "Fran\u00e7ais", "Portuguese", "Espa\u00f1ol", "Deutsch", "Polski", "\u65e5\u672c\u8a9e", "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac", "Indonesian", "\u4e2d\u6587")
+
+pkgEnv$label_no = list(
+  "Please authenticate" = "Vennligst godkjenn",
+  "Username:" = "Brukernavn:",
+  "Password:" = "Passord:",
+  "Login" = "Logg inn",
+  "Username or password are incorrect" = "Brukernavn eller passord er feil",
+  "Your account has expired" = "Kontoen din er utl\u00f8pt",
+  "Your account is locked" = "Kontoen din er l\u00e5st",
+  "Please change your password" = "Vennligst endre passord",
+  "New password cannot be the same as old" = "Det nye passordet kan ikke v\u00e6re det samme som det gamle",
+  "New password:" = "Nytt passord:",
+  "Confirm password:" = "Bekreft passord:",
+  "Update new password" = "Opdater nytt passord",
+  "Password successfully updated! Please re-login" = "Passordet er oppdatert! Vennligst logg inn p\u00e5 nytt",
+  "The two passwords are different" = "De to passordene er forskjellige",
+  "Failed to update password" = "Kunne ikke oppdatere passordet",
+  "Logout" = "Logg ut",
+  "Go to application" = "G\u00e5 til applikasjonen",
+  "Administrator mode" = "Administratormodus",
+  "Add a user" = "Legg til en bruker",
+  "Too many users" = "For mange brukere",
+  "Maximum number of users : %s" = "Maximalt antall brukere: %s",
+  "Failed to update user" = "Kunne ikke oppdatere bruker",
+  "User successfully updated" = "Bruker opdatert",
+  "Cancel" = "Avbryte",
+  "Confirm new user" = "Bekreft ny bruker",
+  "Confirm change" = "Bekreft endring",
+  "Are you sure to remove user(s): %s from the database ?" = "Er du sikker du vill fjerne bruker(e): %s fra databasen?",
+  "Delete user(s)" = "Slett bruker(e)",
+  "Delete user" = "Slett bruker",
+  "Edit user" = "Rediger bruker",
+  "User already exist!" = "Existerende bruker!",
+  "Dismiss" = "Avvise",
+  "New user %s succesfully created!" = "Ny bruker %s opprettet!",
+  "Ask to change password" = "Be om passord endring",
+  "Confirm" = "Bekreft",
+  "Ask %s to change password on next connection?" = "Be %s om passord endring ved neste p\u00e5melding?",
+  "Change saved!" = "Endring lagret!",
+  "Failed to update the database" = "Kunne ikke oppdatere databasen",
+  "Password does not respect safety requirements" = "Passordet respekterer ikke sikkerhetskravene",
+  "Password must contain at least one number, one lowercase, one uppercase and must be at least length 6." = "Passordet m\u00e5 inneholde minst ett tall, \u00e9n liten bokstav, \u00e9n stor bokstav og m\u00e5 v\u00e6re minst 6 tegn.",
+  "Number of connections per user" = "Antall tilkoblinger per bruker",
+  "Number of connections per day" = "Antall tilkoblinger per dag",
+  "Total number of connection" = "Totalt antall tilkoblinger",
+  "You can\'t remove yourself!" = "Du kan ikke fjerne deg selv!",
+  "User:" = "Bruker:",
+  "Period:" = "Periode:",
+  "Last week" = "Forrige uke",
+  "Last month" = "Forrige m\u00e5ned",
+  "All period" = "Hele perioden",
+  "Home" = "Hjem",
+  "Select all shown users" = "Velg alle viste brukere",
+  "Remove selected users" = "Fjern utvalgte brukere",
+  "Edit selected users" = "Rediger utvalgte brukere",
+  "Force selected users to change password" = "Tving utvalgte brukere til \u00e5 endre passord",
+  "Users" = "Brukere",
+  "Passwords" = "Passord",
+  "Download logs database" = "Last ned loggdatabasen",
+  "Download SQL database" = "Last ned loggdatabasen",
+  "Download Users file" = "Last ned brukerfil",
+  "Reset password for %s?" = "Tilbakestill passord for %s?",
+  "Reset password" = "Tilbakestill passord",
+  "Temporary password:" = "Midlertidig passord:",
+  "Password succesfully reset!" = "Passordet er tilbakestilt!",
+  "You are not authorized for this application" = "Du er ikke autorisert for denne applikasjonen",
+  "Language"  = "Spr\u00e5k",
+  "Yes" = "Ja",
+  "No" = "Nei",
+  "Password" = "Passord",
+  "start" = "start",
+  "expire" = "utl\u00f8pe",
+  "admin" = "Admin",
+  "user" = "Bruker",
+  "Edit" = "Rediger",
+  "Remove" = "Fjern",
+  "must_change" = "M\u00e5 endres",
+  "have_changed" = "Har endret",
+  "date_change" = "Dato",
+  "Change password" = "Endre passord",
+  "Select" = "Velg",
+  "Logs" = "Logger",
+  "All users" = "Alle brukere",
+  "Nb logged" = "Nb logget",
+  "Allowed null values" = "Tillatte nullverdier"
+)
+
+v_language_registered = c("en", "fr", "pt-BR", "es", "de", "pl", "ja", "el", "id", "zh-CN", "no")
+names(v_language_registered) = c("English", "Fran\u00e7ais", "Portuguese", "Espa\u00f1ol", "Deutsch", "Polski", "\u65e5\u672c\u8a9e", "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac", "Indonesian", "\u4e2d\u6587", "Norsk")
 
 
 #' @importFrom R6 R6Class
@@ -888,7 +975,8 @@ language <- R6::R6Class(
                                   "ja" = pkgEnv$label_ja,
                                   "el" = pkgEnv$label_el,
                                   "id" = pkgEnv$label_id,
-                                  "zh-CN" = pkgEnv$label_cn
+                                  "zh-CN" = pkgEnv$label_cn,
+                                  "no" = pkgEnv$label_no
       )
     },
     get = function(label) {
@@ -927,9 +1015,10 @@ language <- R6::R6Class(
       "de" = "de",
       "pl" = "pl",
       "ja" = "ja",
-      "el" = "el", 
-      "id" = "id", 
-      "zh-CN" = "zh-CN"
+      "el" = "el",
+      "id" = "id",
+      "zh-CN" = "zh-CN",
+      "no" = "no"
     ),
     DT_lan = list(
       fr = list(
@@ -1156,6 +1245,29 @@ language <- R6::R6Class(
           sSortAscending = ": aktifkan untuk mengurutkan kolom secara naik",
           sSortDescending = ": aktifkan untuk mengurutkan kolom secara turun"
         )
+      ),
+      no = list(
+        sEmptyTable = "Ingen data tilgjengelig i tabellen",
+        sInfo = "Viser _START_ til _END_ av _TOTAL_ oppf\u00f8ringer",
+        sInfoEmpty = "Viser 0 til 0 av 0 oppf\u00f8ringer",
+        sInfoFiltered = "(filtrert fra _MAX_ totale oppf\u00f8ringer)",
+        sInfoPostFix = "",
+        sInfoThousands = ",",
+        sLengthMenu = "Vis _MENU_ oppf\u00f8ringer",
+        sLoadingRecords = "Lasting...",
+        sProcessing = "Bearbeiding...",
+        sSearch = "S\u00f8k:",
+        sZeroRecords = "Ingen matchende oppf\u00f8ringer funnet",
+        oPaginate = list(
+          sFirst = "F\u00f8rst",
+          sLast = "Sist",
+          sNext = "Neste",
+          sPrevious = "Forrige"
+        ),
+        oAria = list(
+          sSortAscending = ": aktiver for \u00e5 sortere kolonnen stigende",
+          sSortDescending = ": aktiver for \u00e5 sortere kolonnen synkende"
+        )
       )
     ),
     length = function() base::length(private$labels)
@@ -1163,12 +1275,12 @@ language <- R6::R6Class(
 )
 
 
-#' @title Use {shinymanager} labels
+#' @title Use shinymanager labels
 #'
 #' @description See all labels registered with \code{get_labels()},
 #'  then set custom text with \code{set_labels()}.
 #'
-#' @param lan Language to use for labels, supported values are : "en", "fr", "pt-BR", "es", "de", "pl", "ja", "el", "id", "zh-CN".
+#' @param lan Language to use for labels, supported values are : "en", "fr", "pt-BR", "es", "de", "pl", "ja", "el", "id", "zh-CN", "no".
 #'
 #' @return A language object
 #' @export
@@ -1184,13 +1296,13 @@ use_language <- function(lan = "en") {
   lang
 }
 
-#' @title Modify {shinymanager} labels to use custom text
+#' @title Modify shinymanager labels to use custom text
 #'
 #' @description See all labels registered with \code{get_labels()},
 #'  then set custom text with \code{set_labels()}.
 #'
-#' @param language Language to use for labels, supported values are :  "en", "fr", "pt-BR", "es", "de", "pl", "ja", "el", "id", "zh-CN".
-#' @param ... A named list with labels to replace.
+#' @param language Language to use for labels, supported values are :  "en", "fr", "pt-BR", "es", "de", "pl", "ja", "el", "id", "zh-CN", "no".
+#' @param ... A named list with labels to replace or several named argument
 #'
 #' @return \code{get_labels()} return a named list with all labels registered.
 #' @export
@@ -1206,12 +1318,26 @@ use_language <- function(lan = "en") {
 #'   "Username:" = "What's your name:",
 #'   "Password:" = "Enter your password:"
 #' )
+#' 
+#' # same with named list
+#' set_labels(
+#'   language = "en",
+#'   list(
+#'     "Please authenticate" = "You have to login",
+#'     "Username:" = "What's your name:",
+#'     "Password:" = "Enter your password:"
+#'  )
+#' )
 set_labels <- function(language, ...) {
-  
-  if (!language %in% c("en", "fr", "pt-BR", "es", "de", "pl", "ja", "el", "id", "zh-CN")) {
-    stop("Only supported language for the now are: en, fr, pt-BR, es, de, pl, ja, el, id, zh-CN", call. = FALSE)
+
+  if (!language %in% c("en", "fr", "pt-BR", "es", "de", "pl", "ja", "el", "id", "zh-CN", "no")) {
+    stop("Only supported language for the now are: en, fr, pt-BR, es, de, pl, ja, el, id, zh-CN, no", call. = FALSE)
   }
   args <- list(...)
+  # named list in input ?
+  if("list" %in% class(args[[1]])){
+    args <- args[[1]]
+  }
   if (!all(nzchar(names(args)))) {
     stop("All arguments must be named!", call. = FALSE)
   }
@@ -1226,7 +1352,8 @@ set_labels <- function(language, ...) {
                    "ja" = pkgEnv$label_ja,
                    "el" = pkgEnv$label_el,
                    "id" = pkgEnv$label_id,
-                   "zh-CN" = pkgEnv$label_cn
+                   "zh-CN" = pkgEnv$label_cn,
+                   "no" = pkgEnv$label_no
   )
 
   update_labels <- modifyList(
@@ -1254,6 +1381,8 @@ set_labels <- function(language, ...) {
     pkgEnv$label_el <- update_labels
   } else if (language %in% "id") {
     pkgEnv$label_id <- update_labels
+  } else if (language %in% "no") {
+    pkgEnv$label_no <- update_labels
   }
 
   invisible(TRUE)
@@ -1264,8 +1393,8 @@ set_labels <- function(language, ...) {
 #' @rdname custom-labels
 get_labels <- function(language = "en") {
 
-  if (!language %in% c("en", "fr", "pt-BR", "es", "de", "pl", "ja", "el", "id", "zh-CN")) {
-    warning("Only supported language for the now are: en, fr, pt-BR, es, de, pl, ja, el, id, zh-CN", call. = FALSE)
+  if (!language %in% c("en", "fr", "pt-BR", "es", "de", "pl", "ja", "el", "id", "zh-CN", "no")) {
+    warning("Only supported language for the now are: en, fr, pt-BR, es, de, pl, ja, el, id, zh-CN, no", call. = FALSE)
     language <- "en"
   }
 
@@ -1279,6 +1408,7 @@ get_labels <- function(language = "en") {
           "ja" = pkgEnv$label_ja,
           "zh-CN" = pkgEnv$label_cn,
           "el" = pkgEnv$label_el,
-          "id" = pkgEnv$label_id
+          "id" = pkgEnv$label_id,
+          "no" = pkgEnv$label_no
   )
 }
